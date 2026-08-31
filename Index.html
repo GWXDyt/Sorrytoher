@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eee2d2;
+    color:#29252a;
+    font-family:"DM Sans",sans-serif;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:65px;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 6%;
+
+    background:rgba(28,25,28,.82);
+    backdrop-filter:blur(15px);
+
+    color:white;
+}
+
+.logo{
+    font-family:"Caveat",cursive;
+    font-size:28px;
+    font-weight:600;
+}
+
+.logo span{
+    color:#f18a98;
+}
+
+.navlinks{
+    display:flex;
+    gap:28px;
+}
+
+.navlinks a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.navlinks a:hover{
+    color:#f29aaa;
+}
+
+.music{
+    border:none;
+    padding:10px 17px;
+    border-radius:30px;
+    background:#fff1e6;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:100px 25px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        120deg,
+        rgba(24,25,31,.93),
+        rgba(101,59,69,.62)
+    ),
+    url("assets/memory-3.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.small-title{
+    font-family:"Caveat",cursive;
+    font-size:32px;
+    color:#ffb1bd;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(55px,10vw,105px);
+    line-height:.95;
+    margin:12px 0;
+}
+
+.hero h1 span{
+    font-family:"Caveat",cursive;
+    color:#ff8798;
+    font-size:1.15em;
+}
+
+.hero p{
+    max-width:560px;
+    margin:25px auto;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.read-button{
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    background:#e66d7f;
+    color:white;
+
+    text-decoration:none;
+    font-weight:600;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
+
+.read-button:hover{
+    transform:translateY(-3px);
+}
+
+/* LETTER */
+
+.letter{
+    min-height:100vh;
+
+    padding:120px 7%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 31px,
+        #d8cec1 32px
+    ),
+    #eee2d2;
+}
+
+.paper{
+    position:relative;
+
+    width:100%;
+    max-width:900px;
+
+    padding:60px clamp(25px,7vw,80px);
+
+    background:#fffaf1;
+
+    box-shadow:
+    0 25px 70px rgba(55,40,30,.18);
+
+    transform:rotate(-.5deg);
+}
+
+.paper:before{
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:27px;
+
+    top:8px;
+    left:-15px;
+
+    background:rgba(222,188,155,.7);
+
+    transform:rotate(-8deg);
+}
+
+.paper:after{
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:27px;
+
+    top:8px;
+    right:-15px;
+
+    background:rgba(222,188,155,.7);
+
+    transform:rotate(8deg);
+}
+
+.paper h2{
+    text-align:center;
+
+    font-family:"Caveat",cursive;
+
+    font-size:62px;
+
+    margin-bottom:30px;
+}
+
+.paper p{
+    font-family:"Caveat",cursive;
+
+    font-size:27px;
+
+    line-height:1.5;
+
+    margin:20px 0;
+}
+
+.important{
+    color:#bd5967;
+
+    text-decoration:underline;
+    text-decoration-style:wavy;
+}
+
+.signature{
+    text-align:right;
+
+    font-family:"Caveat",cursive;
+
+    font-size:32px;
+
+    margin-top:35px;
+}
+
+/* WHAT I MEAN */
+
+.mean{
+    min-height:100vh;
+
+    padding:120px 7%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f7ece5,
+        #e8efe7
+    );
+}
+
+.heading{
+    text-align:center;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(43px,7vw,72px);
+}
+
+.subtitle{
+    text-align:center;
+
+    margin:15px auto 50px;
+
+    opacity:.65;
+}
+
+.cards{
+    max-width:1050px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}
+
+.card{
+    background:rgba(255,250,243,.85);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(60,45,35,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    font-family:"Caveat",cursive;
+
+    color:#c35d6c;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.card p{
+    line-height:1.7;
+}
+
+/* MEMORIES */
+
+.memories{
+    min-height:100vh;
+
+    padding:120px 5%;
+
+    background:#e5d9c8;
+}
+
+.gallery{
+    max-width:1100px;
+
+    margin:55px auto 35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+.polaroid{
+    background:#fffdf8;
+
+    padding:13px 13px 30px;
+
+    box-shadow:
+    0 20px 35px rgba(45,35,25,.22);
+
+    transform:rotate(-2deg);
+
+    transition:.4s;
+}
+
+.polaroid:nth-child(2){
+    transform:rotate(2.5deg);
+    margin-top:35px;
+}
+
+.polaroid:nth-child(3){
+    transform:rotate(-1deg);
+}
+
+.polaroid:hover{
+    transform:rotate(0deg) translateY(-8px);
+}
+
+.polaroid img{
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.caption{
+    text-align:center;
+
+    margin-top:12px;
+
+    font-family:"Caveat",cursive;
+
+    font-size:26px;
+}
+
+.memory-text{
+    text-align:center;
+
+    font-family:"Caveat",cursive;
+
+    font-size:31px;
+
+    color:#89515b;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+/* FINAL */
+
+.final{
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:100px 25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #f7ede6,
+        #efdde0
+    );
+}
+
+.final-box{
+    max-width:800px;
+}
+
+.hand-note{
+    margin:40px auto;
+
+    padding:40px;
+
+    background:#fffaf1;
+
+    box-shadow:0 20px 50px rgba(80,55,55,.13);
+
+    transform:rotate(.5deg);
+
+    font-family:"Caveat",cursive;
+
+    font-size:31px;
+
+    line-height:1.45;
+}
+
+.question{
+    font-family:"Caveat",cursive;
+
+    font-size:48px;
+
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+}
+
+.buttons button{
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:15px;
+
+    font-family:"Caveat",cursive;
+
+    font-size:23px;
+
+    cursor:pointer;
+}
+
+.yes{
+    background:#df7b89;
+    color:white;
+}
+
+.notyet{
+    background:#dce5d8;
+    color:#384238;
+}
+
+#reply{
+    font-family:"Caveat",cursive;
+
+    font-size:32px;
+
+    margin-top:30px;
+
+    color:#96515c;
+}
+
+/* FOOTER */
+
+footer{
+    background:#20232d;
+
+    color:#fff1e7;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    font-family:"Caveat",cursive;
+
+    font-size:30px;
+}
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+
+    pointer-events:none;
+
+    color:#ed7c8b;
+
+    font-size:25px;
+
+    z-index:9999;
+
+    animation:heartFloat 3s ease-out forwards;
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:translateY(0) scale(.7);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-250px) scale(1.5);
+        opacity:0;
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .navlinks{
+        display:none;
+    }
+
+    nav{
+        height:58px;
+    }
+
+    .hero{
+        background-attachment:scroll;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+        max-width:500px;
+    }
+
+    .polaroid:nth-child(2){
+        margin-top:0;
+    }
+
+    .paper p{
+        font-size:24px;
+    }
+
+    .paper h2{
+        font-size:50px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        max-width:250px;
+        margin:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+For You <span>♥</span>
+</div>
+
+<div class="navlinks">
+<a href="#home">Home</a>
+<a href="#sorry">I'm Sorry</a>
+<a href="#mean">What I Mean</a>
+<a href="#memories">Memories</a>
+<a href="#final">Us</a>
+</div>
+
+<button class="music" onclick="songMessage()">
+♪ Our Song
+</button>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="small-title">
+For the girl I never wanted to hurt… ♡
+</div>
+
+<h1>
+I'm Sorry,<br>
+<span>truly.</span>
+</h1>
+
+<p>
+Yesterday, I said something without thinking.
+I know it hurt you, and I wanted to say what
+I couldn't properly say in a message.
+</p>
+
+<a href="#sorry" class="read-button">
+Please read this…
+</a>
+
+</div>
+
+</section>
+
+
+<!-- HANDWRITTEN LETTER -->
+
+<section class="letter" id="sorry">
+
+<div class="paper">
+
+<h2>
+I'm Sorry ♥
+</h2>
+
+<p>
+Yesterday, I said something
+<span class="important">without thinking</span>
+about how it might sound to you.
+</p>
+
+<p>
+I know what I said hurt you,
+and I'm genuinely sorry.
+</p>
+
+<p>
+I don't want to make excuses or simply say
+“you misunderstood,” because I understand
+that your feelings were real, even if my
+intention was completely different.
+</p>
+
+<p>
+Sometimes I speak before I think,
+and yesterday I made that mistake with
+someone whose feelings mean so much to me.
+</p>
+
+<p>
+I never wanted my words to make you feel bad,
+unwanted, or less important.
+</p>
+
+<p class="important">
+I'm sorry for hurting you.
+I'll be more careful with my words,
+because you deserve that from me. ♥
+</p>
+
+<div class="signature">
+— From someone who really cares about you.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHAT I MEAN -->
+
+<section class="mean" id="mean">
+
+<h2 class="heading">
+What I actually meant… ♡
+</h2>
+
+<p class="subtitle">
+Not an excuse. Just the truth behind what I was trying to say.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>
+01 · I wasn't trying to hurt you.
+</h3>
+
+<p>
+My words came out wrong.
+I understand why they hurt,
+and I wish I had thought before saying them.
+</p>
+</div>
+
+
+<div class="card">
+<h3>
+02 · You matter to me.
+</h3>
+
+<p>
+I never wanted you to feel less important,
+unwanted, or like your feelings don't matter to me.
+</p>
+</div>
+
+
+<div class="card">
+<h3>
+03 · I made a stupid mistake.
+</h3>
+
+<p>
+I'm taking responsibility instead of trying
+to defend myself. I should have been more thoughtful.
+</p>
+</div>
+
+
+<div class="card">
+<h3>
+04 · I wish I could take it back.
+</h3>
+
+<p>
+If I could rewind yesterday,
+I'd choose my words differently.
+I'm genuinely sorry that I didn't.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MEMORIES -->
+
+<section class="memories" id="memories">
+
+<h2 class="heading">
+Us &gt; Memories ♡
+</h2>
+
+<p class="subtitle">
+Some moments are too special to leave inside a camera roll.
+</p>
+
+<div class="gallery">
+
+
+<div class="polaroid">
+
+<img src="assets/memory-1.jpeg">
+
+<div class="caption">
+A little piece of you,
+drawn with love. ♥
+</div>
+
+</div>
+
+
+<div class="polaroid">
+
+<img src="assets/memory-2.jpeg">
+
+<div class="caption">
+You looking beautiful,
+as always.
+</div>
+
+</div>
+
+
+<div class="polaroid">
+
+<img src="assets/memory-3.jpeg">
+
+<div class="caption">
+One of those little
+moments I love.
+</div>
+
+</div>
+
+
+</div>
+
+<p class="memory-text">
+“These little memories will always mean
+something to me.” ♥
+</p>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final" id="final">
+
+<div class="final-box">
+
+<h2 class="heading">
+One last thing… ♡
+</h2>
+
+<div class="hand-note">
+
+I don't expect you to stop being hurt instantly.
+
+<br><br>
+
+Take your time.
+
+I just want you to know that
+I'm genuinely sorry.
+
+<br><br>
+
+I care about you more than
+one careless sentence could ever explain.
+
+</div>
+
+
+<div class="question">
+Forgive this idiot? 🥺
+</div>
+
+
+<div class="buttons">
+
+<button class="yes" onclick="forgive()">
+♥ Yes
+</button>
+
+<button class="notyet" onclick="notYet()">
+Not yet
+</button>
+
+</div>
+
+
+<div id="reply"></div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+Made with love, just for you. ♥
+<br>
+
+<span style="font-size:23px">
+I promise I'll think before I speak next time.
+</span>
+
+</footer>
+
+
+<script>
+
+function forgive(){
+
+document.getElementById("reply").innerHTML =
+"Thank you… you have no idea how much that means to me. ♥";
+
+for(let i=0;i<25;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="♥";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.top=(65+Math.random()*20)+"vh";
+
+heart.style.fontSize=(18+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},3000);
+
+}
+
+}
+
+
+function notYet(){
+
+document.getElementById("reply").innerHTML =
+"That's okay. Take your time. I'll respect it. ♥";
+
+}
+
+
+function songMessage(){
+
+alert(
+"🎵 Add your song file as 'song.mp3' inside the website folder, and I can connect it to this button."
+);
+
+}
+
+</script>
+
+</body>
+</html>
